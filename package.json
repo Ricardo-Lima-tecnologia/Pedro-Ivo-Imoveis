@@ -40,7 +40,8 @@
     "knip": "^5.51.0"
   },
   "scripts": {
-    "build": "wrangler types && tsc -b && vite build",
+    "build": "tsc -b && vite build",
+    "build:cloudflare": "wrangler types && tsc -b && vite build",
     "cf-typegen": "wrangler types",
     "check": "tsc && vite build && wrangler deploy --dry-run",
     "dev": "vite",
