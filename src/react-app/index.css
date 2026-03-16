@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Navy blue and gray color scheme */
+    --background: 0 0% 100%;
+    --foreground: 215 30% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 30% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 30% 15%;
+    /* Navy Blue Primary */
+    --primary: 220 60% 25%;
+    --primary-foreground: 0 0% 100%;
+    /* Destructive - muted gray */
+    --destructive: 215 20% 40%;
+    --destructive-foreground: 0 0% 100%;
+    /* Secondary - light gray-blue */
+    --secondary: 215 25% 94%;
+    --secondary-foreground: 220 50% 25%;
+    --muted: 215 20% 96%;
+    --muted-foreground: 215 15% 45%;
+    /* Accent - Slate blue accent */
+    --accent: 215 45% 45%;
+    --accent-foreground: 0 0% 100%;
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 220 60% 25%;
+    --radius: 0.5rem;
+    /* Chart colors - navy and gray spectrum */
+    --chart-1: 220 60% 25%;
+    --chart-2: 215 45% 45%;
+    --chart-3: 215 30% 55%;
+    --chart-4: 215 20% 65%;
+    --chart-5: 215 15% 75%;
+    --sidebar: 215 25% 98%;
+    --sidebar-foreground: 215 30% 15%;
+    --sidebar-primary: 220 60% 25%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 25% 94%;
+    --sidebar-accent-foreground: 220 50% 25%;
+    --sidebar-border: 215 20% 88%;
+    --sidebar-ring: 220 60% 25%;
+    /* Custom navy/gray colors */
+    --navy-blue: 220 60% 25%;
+    --navy-light: 215 45% 45%;
+    --navy-dark: 220 40% 12%;
+  }
+
+  .dark {
+    --background: 220 30% 8%;
+    --foreground: 0 0% 98%;
+    --card: 220 30% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 30% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 215 50% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 25% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 215 20% 18%;
+    --muted-foreground: 215 15% 60%;
+    --accent: 215 40% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 215 25% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 100% / 10%;
+    --input: 0 0% 100% / 15%;
+    --ring: 215 50% 55%;
+    --chart-1: 215 50% 55%;
+    --chart-2: 215 40% 60%;
+    --chart-3: 215 30% 65%;
+    --chart-4: 215 20% 70%;
+    --chart-5: 215 15% 75%;
+    --sidebar: 220 30% 12%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 215 50% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 25% 18%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 100% / 10%;
+    --sidebar-ring: 215 50% 55%;
+    --navy-blue: 215 50% 55%;
+    --navy-light: 215 40% 60%;
+    --navy-dark: 220 30% 8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Open Sans", system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", system-ui, sans-serif;
+  }
+
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .font-display {
+    font-family: "Montserrat", system-ui, sans-serif;
+  }
+}
